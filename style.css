@@ -11,8 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     top: 30px; 
-    left: 50%; /* Define a posição esquerda da div para 50% da largura da tela */
-    transform: translateX(-50%); /* Move a div 50% para a esquerda baseado na sua própria largura */
+    right: 30px;
     background-image: url('https://www.proenem.com.br/enem/wp-content/uploads/2023/11/Frame-3722.png');
     background-position: top;
     border-radius: 8px;
