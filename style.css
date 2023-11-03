@@ -1,0 +1,37 @@
+body {
+    background-color: #00BC35;
+    margin: 0;
+    font-family: 'Lato', sans-serif; /* Aplica a fonte Lato para todo o corpo do documento */
+  }
+  
+  #contador {
+    position: absolute; 
+    top: 30px; 
+    left: 30px;
+    background-image: url('https://www.proenem.com.br/enem/wp-content/uploads/2023/11/Frame-3722.png');
+    background-position: top;
+    background-color: rgba(250, 250, 252, 0.9); /* #fafafc com 90% de opacidade */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Adiciona um espaço interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    
+  }
+  
+  #contador h2 {
+    color: #fafafc;/* Cor do título em preto */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  #valorContador {
+    background-color: white; /* Fundo branco para a caixa do valor do contador */
+    color: black; /* Cor do texto em preto */
+    padding: 10px; /* Adiciona um espaço interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    display: inline-block; /* Faz com que a caixa se ajuste ao conteúdo */
+    width: 75%;
+    text-align: center;
+    font-weight: 900;
+  }
+  
