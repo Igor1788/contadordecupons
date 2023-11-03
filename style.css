@@ -54,6 +54,12 @@ body {
     position: relative;
     animation: pulsar 5s infinite ease-in-out;
   }
+  #tagOutline{
+    color: #fafafc;
+    margin-top: 3px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
   
   #barraProgresso {
     position: absolute;
