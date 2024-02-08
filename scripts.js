@@ -11,7 +11,7 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-const numeroRef = database.ref('Numero');
+const numeroRef = database.ref('lancamento/5');
 const chamadasRef = database.ref('Chamadas'); 
 
 let valorAtual = null;
@@ -60,6 +60,28 @@ chamadasRef.on('value', function(snapshot) {
   atualizarChamada(); 
 });
 
+// Novo listener para a referência de lançamento
+lancamentoRef.on('value', function(snapshot) {
+  const valorLancamento = snapshot.val();
+  // Supondo que valorLancamento seja um objeto com um campo numérico que você deseja usar
+  const novoValor = valorLancamento.numero; // Ajuste este caminho conforme a estrutura de dados
+  if (valorAtual === null) {
+    valorAtual = novoValor;
+    atualizarContador(valorAtual);
+  } else {
+    if (intervalo) clearInterval(intervalo);
+    intervalo = setInterval(() => {
+      if (valorAtual < novoValor) {
+        valorAtual++;
+      } else if (valorAtual > novoValor) {
+        valorAtual--;
+      } else {
+        clearInterval(intervalo);
+      }
+      atualizarContador(valorAtual);
+    }, 500);
+  }
+});
 
 
 setInterval(atualizarChamada, 10000);
